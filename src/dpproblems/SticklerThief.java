@@ -7,7 +7,7 @@ package dpproblems;
 
 public class SticklerThief {
 
-	int helperMemo(int a[], int start, int n, int[] dp) {
+	static int helperMemo(int a[], int start, int n, int[] dp) {
 		if (start >= n) {
 			return 0;
 		}
@@ -19,14 +19,14 @@ public class SticklerThief {
 		return Math.max(t1, t2);
 	}
 
-	public int FindMaxSumMemo(int arr[], int n) {
+	static public int FindMaxSumMemo(int arr[], int n) {
 		// Your code here
 		int start = 0;
 		int[] dp = new int[n + 1];
 		return helperMemo(arr, start, n, dp);
 	}
 
-	int helperRecursion(int a[], int start, int n) {
+	static int helperRecursion(int a[], int start, int n) {
 		if (start >= n) {
 			return 0;
 		}
@@ -35,13 +35,13 @@ public class SticklerThief {
 		return Math.max(t1, t2);
 	}
 
-	public int FindMaxSumRecursion(int arr[], int n) {
+	static int FindMaxSumRecursion(int arr[], int n) {
 		// Your code here
 		int start = 0;
 		return helperRecursion(arr, start, n);
 	}
 
-	public int FindMaxSumDp(int arr[], int n) {
+	static int FindMaxSumDp(int arr[], int n) {
 		// Your code here
 		if (arr.length == 0)
 			return 0;
